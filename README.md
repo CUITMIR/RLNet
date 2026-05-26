@@ -1,6 +1,6 @@
 # RLNet
 ## Overview
-Overall Architecture of RouterFormer.
+Overall Architecture of RLNet.
 <img width="5123" height="2665" alt="图片15" src="https://github.com/user-attachments/assets/354b45d7-7d1c-4259-86fd-c608d27425b5" />
 
 
