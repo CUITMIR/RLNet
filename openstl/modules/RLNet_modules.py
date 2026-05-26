@@ -7,10 +7,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from timm.models.layers import DropPath, trunc_normal_
-from timm.models.convnext import ConvNeXtBlock
-from timm.models.mlp_mixer import MixerBlock
-from timm.models.swin_transformer import SwinTransformerBlock, window_partition, window_reverse
-from timm.models.vision_transformer import Block as ViTBlock
 
 
 class BasicConv2d(nn.Module):
