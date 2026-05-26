@@ -1,5 +1,5 @@
 import torch
-from openstl.models import SimVP_Model
+from openstl.models import RLNet_Model
 from .base_method import Base_method
 import torch.nn.functional as F
 import torch.nn as nn
@@ -73,7 +73,7 @@ def radar_diff_div_reg(pred_y, batch_y, scales=(1, 2), eps=1e-8):
     return alpha * loss_grow + (1 - alpha) * loss_decay
 
 
-class SimVP(Base_method):
+class RLNet(Base_method):
     r"""SimVP
 
     Implementation of `SimVP: Simpler yet Better Video Prediction
