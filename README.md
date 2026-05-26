@@ -1,8 +1,8 @@
 # RLNet
 ## Overview
 Overall Architecture of RouterFormer.
-<img width="1080" height="269" alt="image" src="https://github.com/user-attachments/assets/36633f01-a2be-4a24-a905-51b653c97801" />
-<img width="1080" height="302" alt="image" src="https://github.com/user-attachments/assets/b1aa530b-e0f6-4c32-af1e-d632d553adc1" />
+<img width="5123" height="2665" alt="图片15" src="https://github.com/user-attachments/assets/354b45d7-7d1c-4259-86fd-c608d27425b5" />
+
 
 ## Installation
 ```
