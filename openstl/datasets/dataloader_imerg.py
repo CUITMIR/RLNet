@@ -16,11 +16,11 @@ class Imerg(Dataset):
         this_dir = os.path.dirname(os.path.realpath(__file__))
 
         if is_train:
-            self.data_root = os.path.join(this_dir, '../../data/imerg/train_v2')
+            self.data_root = os.path.join(this_dir, '../../data/imerg/train')
             with open(os.path.join(this_dir, '../../data/imerg/train_set.txt'), 'r') as f:
                 self.dataset = eval(f.read())
         else:
-            self.data_root = os.path.join(this_dir, '../../data/imerg/val_v2')
+            self.data_root = os.path.join(this_dir, '../../data/imerg/val')
             with open(os.path.join(this_dir, '../../data/imerg/val_set.txt'), 'r') as f:
                 self.dataset = eval(f.read())
 
