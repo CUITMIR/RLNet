@@ -15,7 +15,7 @@ class HKO7(Dataset):
 
         this_dir = os.path.dirname(os.path.realpath(__file__))
 
-        self.data_root = os.path.join(this_dir, '../../data/hko7/denoised_images')
+        self.data_root = os.path.join(this_dir, '../../data/hko7/images')
         # self.files = os.listdir(data_root)
         # self.files = [os.path.join(data_root, name) for name in self.files]
 
