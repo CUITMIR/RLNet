@@ -15,13 +15,13 @@ class Sichuan128(Dataset):
 
         this_dir = os.path.dirname(os.path.realpath(__file__))
 
-        self.data_root = os.path.join(this_dir, '../../data/sc_128/128x128')
+        self.data_root = os.path.join(this_dir, '../../data/sc/images')
 
         if is_train:
-            with open(os.path.join(this_dir, '../../data/sc_128/train_set.txt'), 'r') as f:
+            with open(os.path.join(this_dir, '../../data/sc/train_set.txt'), 'r') as f:
                 self.dataset = eval(f.read())
         else:
-            with open(os.path.join(this_dir, '../../data/sc_128/val_set.txt'), 'r') as f:
+            with open(os.path.join(this_dir, '../../data/sc/val_set.txt'), 'r') as f:
                 self.dataset = eval(f.read())
 
         self.mean = 0
