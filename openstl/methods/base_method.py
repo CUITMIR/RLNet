@@ -136,21 +136,6 @@ class Base_method(l.LightningModule):
     def on_validation_epoch_start(self):
         self.val_outputs = []
     
-    
-    def diff_div_reg(self, pred_y, batch_y, tau=0.1, eps=1e-12):
-        B, T, C = pred_y.shape[:3]
-        if T <= 2: return 0
-        gap_pred_y = (pred_y[:, 1:] - pred_y[:, :-1]).reshape(B, T-1, -1)
-        gap_batch_y = (batch_y[:, 1:] - batch_y[:, :-1]).reshape(B, T-1, -1)
-        softmax_gap_p = F.softmax(gap_pred_y / tau, -1)
-        softmax_gap_b = F.softmax(gap_batch_y / tau, -1)
-        loss_gap = softmax_gap_p * \
-            torch.log(softmax_gap_p / (softmax_gap_b + eps) + eps)
-        # 原版: return loss_gap.mean()  # 在 D 维上又除了一次,导致量级被压低 D 倍
-        return loss_gap.sum(dim=-1).mean()  # 标准 KL: 在分布维度求和,在样本维度求均值
-
-    
-    
     def validation_step(self, batch, batch_idx):
         batch_x, batch_y = batch
         pred_y = self(batch_x, batch_y)
