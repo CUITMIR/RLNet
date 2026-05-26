@@ -4,7 +4,7 @@ from pathlib import Path
 from torch import nn
 import torch.nn.functional as F
 
-from openstl.modules import (ConvSC, ConvNeXtSubBlock, ConvMixerSubBlock, GASubBlock, gInception_ST)
+from openstl.modules import (ConvSC, gInception_ST)
 
 
 class RLNet_Model(nn.Module):
