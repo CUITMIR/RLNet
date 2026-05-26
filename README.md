@@ -6,12 +6,6 @@ Overall Architecture of RouterFormer.
 
 ## Installation
 ```
-# first installation  method
-conda env create -f environment.yml
-conda activate routerformer
-python setup.py develop
-
-# second installation method
 git clone https://github.com/chengtan9907/OpenSTL
 cd OpenSTL
 conda env create -f environment.yml
@@ -30,13 +24,11 @@ It can be obtained via the following address: https://disc.gsfc.nasa.gov/dataset
 ## Start
 ```
 #train
-bash scripts/hko7/hko7_RouterFormer_train.sh
-bash scripts/imerg/imerg_RouterFormer_train.sh
+python tools/train.py -d hko7  -c configs/hko7/RLNet.py --ex_name hko7/RLNet -e 50 --batch_size 4 --val_batch_size 4 --gpus 0
 #test
-bash scripts/hko7/hko7_RouterFormer_test.sh
-bash scripts/imerg/imerg_RouterFormer_test.sh
+python tools/test.py -d hko7  -c configs/hko7/RLNet.py --ex_name test/hko7/RLNet --batch_size 4 --val_batch_size 4 --test --gpus 0 
 ```
 
 ## Acknowledgments
-Our code is based on OpenSTL and PredFormer. We sincerely appreciate for their contributions.
+Our code is based on OpenSTL. We sincerely appreciate for their contributions.
 
